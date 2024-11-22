@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /** Color */
+    --red: #dc2626;
+    --white: #ffffff;
+
+    /** Space */
+    --button-padding-x: 10px;
+    --button-padding-y: 16px;
+    --border-radius: 30px;
+}
+
+table td {
+    padding: 1rem;
+}
+
+.button {
+    padding: var(--button-padding-x) var(--button-padding-y);
+    color: var(--white);
+    border-radius: var(--border-radius);
+}
+
+.btn-delete {
+    background-color: var(--red);
+}
