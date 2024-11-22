@@ -1,6 +1,5 @@
 @extends("layouts/layout")
 @section("content")
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
 <div class="">
     <strong><label>Register new user</label></strong>
     <form action="{{ route('user.create') }} " method="post">
@@ -20,5 +19,5 @@
         </div>
         <button type="submit">Create user</button>
     </form>
-</body>
+</div>
 @stop

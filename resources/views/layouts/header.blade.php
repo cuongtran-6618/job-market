@@ -1,6 +1,7 @@
 <header class="container flex-center">
     <div>Job market</div>
     <nav>
+        <div>Services</div>
         <ul class="flex-center">
             <li class="small-margin">Mounting</li>
             <li class="small-margin">Cleaning</li>
@@ -13,4 +14,3 @@
         </ul>
     </div>
 </header>
-

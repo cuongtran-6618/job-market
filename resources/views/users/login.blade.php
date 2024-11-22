@@ -1,6 +1,5 @@
 @extends("layouts/layout")
 @section("content")
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
 <div>
     <label>Login form</label>
     <form action="" method="post">
@@ -14,6 +13,5 @@
         </div>
         <button type="submit">Login</button>
     </form>
-</body>
 </div>
 @stop
