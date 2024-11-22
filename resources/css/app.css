@@ -11,6 +11,7 @@
     --button-padding-x: 10px;
     --button-padding-y: 16px;
     --border-radius: 30px;
+    --margin-link: 20px;
 }
 
 table td {
@@ -25,4 +26,19 @@ table td {
 
 .btn-delete {
     background-color: var(--red);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.small-margin {
+    margin: 0 var(--margin-link);
+}
+
+header {
+    margin: var(--margin-link) auto;
 }

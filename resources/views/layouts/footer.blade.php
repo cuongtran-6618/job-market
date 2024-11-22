@@ -1,7 +1,7 @@
 <footer>
-    <div class="footer-container container flex">
+    <div class="footer-container container flex-center">
         <div class="">
-            <ul>
+            <ul class="">
                 <li>About us</li>
                 <li>Contact Us</li>
                 <li>FAQ</li>
@@ -11,6 +11,6 @@
         <div class=""></div>
         <div class=""></div>
     </div>
-    <div> 2025 Job market. All rights are reserved.</div>
+    <div class="flex-center"> 2025 Job market. All rights are reserved.</div>
 </footer>
 
