@@ -1,7 +1,7 @@
 @extends("layouts/layout")
 @section("content")
-<div class="container flex flex-col my-0 mx-auto">
-    <table class="flex mx-auto container">
+<div class="container">
+    <table class="mx-auto">
         <tr>
             <th>Id</th>
             <th>Name</th>

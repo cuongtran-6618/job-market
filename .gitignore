@@ -24,4 +24,5 @@ yarn-error.log
 /.zed
 .DS_Store
  .idea/*
-/storage/framework/*
+/storage/framework
+

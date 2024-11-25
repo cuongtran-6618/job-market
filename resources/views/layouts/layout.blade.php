@@ -13,11 +13,11 @@
     <!-- Styles -->
     @vite('resources/css/app.css')
 </head>
-<body>
-@include("layouts/header")
+<body class="container mx-auto">
+    @include("layouts/header")
 
-@yield('content')
+    @yield('content')
 
-@include("layouts/footer")
+    @include("layouts/footer")
 </body>
 </html>
