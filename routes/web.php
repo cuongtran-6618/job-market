@@ -27,6 +27,11 @@ Route::get('/login', function () {return view('login');})->name('user.login');
 // User list route
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
 
+
 ################### Router for job ########################
+
 // List of jobs
 Route::get('/job', [JobController::class, 'index'])->name('job.index');
+
+// Create a new job
+Route::get('/job/create', [JobController::class, 'create'])->name('job.create');
