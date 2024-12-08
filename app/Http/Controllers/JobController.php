@@ -64,9 +64,13 @@ class JobController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
+        // $param = $request->getParameters();
+        $category = $request->input('category');
+
         //
+        return view('job.create', compact('category'));
     }
 
     /**

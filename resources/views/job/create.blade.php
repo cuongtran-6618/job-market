@@ -1,7 +1,7 @@
 @extends("layouts/layout")
 @section("content")
 <div class="">
-    <strong><label>Create a new job</label></strong>
+    <strong><label>Create a new job for {{ $category }}</label></strong>
     <form action="{{ route('user.create') }} " method="post">
         @csrf
         @method('post')
