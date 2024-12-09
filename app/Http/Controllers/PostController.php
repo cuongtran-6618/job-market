@@ -13,7 +13,7 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Models\Job;
 
-class JobController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,22 +41,22 @@ class JobController extends Controller
             $query->orderBy($sortField, $sortDirection);
 
             // Paginate results
-            $jobs = $query->paginate(10)
+            $posts = $query->paginate(10)
                 ->appends($request->query());
 
             $data = response()->json([
                 'status' => 'success',
-                'jobs' => $jobs,
+                'posts' => $posts,
             ]);
             //dd($data);
 
-            return view('job.index', compact('jobs'));
+            return view('post.index', compact('posts'));
 
         } catch (\Exception $e) {
-            Log::error('Error fetching products: ' . $e->getMessage());
+            Log::error('Error fetching posts: ' . $e->getMessage());
             return response()->json([
                 'status' => 'error',
-                'message' => 'Failed to fetch products'
+                'message' => 'Failed to fetch posts'
             ], 500);
         }
     }
@@ -70,7 +70,7 @@ class JobController extends Controller
         $category = $request->input('category');
 
         //
-        return view('job.create', compact('category'));
+        return view('post.create', compact('category'));
     }
 
     /**

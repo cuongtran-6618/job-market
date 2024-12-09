@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\JobController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -28,10 +28,10 @@ Route::get('/login', function () {return view('login');})->name('user.login');
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
 
 
-################### Router for job ########################
+################### Router for post ########################
 
 // List of jobs
-Route::get('/job', [JobController::class, 'index'])->name('job.index');
+Route::get('/post', [PostController::class, 'index'])->name('post.index');
 
 // Create a new job
-Route::get('/job/create', [JobController::class, 'create'])->name('job.create');
+Route::get('/job/create', [PostController::class, 'create'])->name('post.create');

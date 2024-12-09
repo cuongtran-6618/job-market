@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<body class="container mx-auto">
+@include("layouts/header")
+<div class="container mx-auto">
+    @yield('content')
+</div>
+@include("layouts/footer")
+</body>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,11 +20,4 @@
     <!-- Styles -->
     @vite('resources/css/app.css')
 </head>
-<body class="container mx-auto">
-    @include("layouts/header")
-
-    @yield('content')
-
-    @include("layouts/footer")
-</body>
 </html>
