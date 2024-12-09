@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('customer_id')->references('id')->on('users');
             $table->integer('category_id');
-            $table->integer('country_id');
-            $table->integer('city_id');
+            $table->integer('city_id')->references('id')->on('cities');
             $table->boolean('active')->default(true);
             $table->timestamps();
         });
