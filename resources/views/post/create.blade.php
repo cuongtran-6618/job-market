@@ -9,15 +9,15 @@
         <textarea name="name" placeholder="job description" alt="description"></textarea>
     </div>
     <div class="">
-        <label>password</label>
-        <input name="password" placeholder="your password" alt="password"/>
+        <label>City</label>
+        <select name="city">
+            <option value="0">Placeholder</option>
+            @foreach ($cities as $id => $name)
+                <option value="{{$id}}">{{ $name }}</option>
+            @endforeach
+        </select>
     </div>
-    <select name="city">
-        <option value="0">Placeholder</option>
-        @foreach ($cities as $id => $name)
-        <option value="{{$id}}">{{ $name }}</option>
-        @endforeach
-    </select>
+
     <div class="">
         <label>email</label>
         <input name="email" placeholder="your valid email" alt="email"/>
