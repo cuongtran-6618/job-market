@@ -11,6 +11,8 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    public const TABLE_NAME="users";
+
     use HasFactory, Notifiable, SoftDeletes;
 
     /**

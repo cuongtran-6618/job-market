@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
+    public const TABLE_NAME="posts";
+
     use HasFactory, SoftDeletes, HasUuids;
 
     /**
