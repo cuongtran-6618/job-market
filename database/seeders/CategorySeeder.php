@@ -18,13 +18,13 @@ class CategorySeeder extends Seeder
         DB::table(Category::TABLE_NAME)->insert([
             'name' => 'cleaning',
             'description' => 'Cleaning home',
-            'active' => true,
+            'deleted_at' => null,
         ]);
 
         DB::table(Category::TABLE_NAME)->insert([
             'name' => 'cooking',
             'description' => 'Cooking',
-            'active' => true,
+            'deleted_at' => null,
         ]);
     }
 }

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Models\Job;
+use App\Models\Category;
 use Nnjeim\World\Models\City;
 
 class PostController extends Controller
@@ -68,7 +69,7 @@ class PostController extends Controller
     public function create(Request $request)
     {
         // $param = $request->getParameters();
-        $category = $request->input('category');
+        $selectedCategory = $request->input('category');
         $cityList = City::where('country_code', 'FI')->orderBy('name', 'desc')->get();
 
         $cities = [];
@@ -77,8 +78,9 @@ class PostController extends Controller
             $cities[$city->id] = $city->name;
         }
 
-        //
-        return view('post.create', compact('category', 'cities'));
+        $categories = Category::all()->pluck('description', 'id');
+
+        return view('post.create', compact('selectedCategory', 'cities', 'categories'));
     }
 
     /**
