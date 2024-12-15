@@ -9,10 +9,7 @@
     </div>
     <nav class="float-right inline-block">
         <div>Services</div>
-        <ul class="flex-center">
-            <li class="small-margin">Mounting</li>
-            <li class="small-margin"><a href="/job/create?category=cleaning" title="cleaning">Cleaning</a></li>
-        </ul>
+        <x-menu />
     </nav>
     <div class="links float-right inline-block">
         <ul class="flex-center">
