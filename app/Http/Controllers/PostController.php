@@ -68,6 +68,7 @@ class PostController extends Controller
      */
     public function create(Request $request)
     {
+        dd('controller');
         try {
             // $param = $request->getParameters();
             $selectedCategory = $request->input('category');
