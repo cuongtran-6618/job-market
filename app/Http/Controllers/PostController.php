@@ -68,19 +68,23 @@ class PostController extends Controller
      */
     public function create(Request $request)
     {
-        // $param = $request->getParameters();
-        $selectedCategory = $request->input('category');
-        $cityList = City::where('country_code', 'FI')->orderBy('name', 'desc')->get();
+        try {
+            // $param = $request->getParameters();
+            $selectedCategory = $request->input('category');
+            $cityList = City::where('country_code', 'FI')->orderBy('name', 'desc')->get();
 
-        $cities = [];
+            $cities = [];
 
-        foreach($cityList as $city) {
-            $cities[$city->id] = $city->name;
+            foreach($cityList as $city) {
+                $cities[$city->id] = $city->name;
+            }
+
+            $categories = Category::all()->pluck('description', 'id');
+
+            return view('post.create', compact('selectedCategory', 'cities', 'categories'));
+        } catch (\Exception $exception) {
+            \Log::error($exception->getMessage());
         }
-
-        $categories = Category::all()->pluck('description', 'id');
-
-        return view('post.create', compact('selectedCategory', 'cities', 'categories'));
     }
 
     /**
