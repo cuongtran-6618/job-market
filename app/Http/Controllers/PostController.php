@@ -72,7 +72,11 @@ class PostController extends Controller
         try {
             // $param = $request->getParameters();
             $selectedCategory = $request->input('category');
-            var_dump('category');
+            var_dump($selectedCategory);
+
+            $categories = Category::all()->pluck('description', 'id');
+            var_dump($categories);
+
             $cityList = City::where('country_code', 'FI')->orderBy('name', 'desc')->get();
             var_dump('city');
             $cities = [];
@@ -81,8 +85,7 @@ class PostController extends Controller
                 $cities[$city->id] = $city->name;
             }
 
-            $categories = Category::all()->pluck('description', 'id');
-            var_dump('$categories');
+
             die();
             return view('post.create', compact('selectedCategory', 'cities', 'categories'));
         } catch (\Exception $exception) {
