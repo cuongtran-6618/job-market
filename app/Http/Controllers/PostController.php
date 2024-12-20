@@ -68,12 +68,13 @@ class PostController extends Controller
      */
     public function create(Request $request)
     {
-        dd('controller');
+        var_dump('controller');
         try {
             // $param = $request->getParameters();
             $selectedCategory = $request->input('category');
+            var_dump('category');
             $cityList = City::where('country_code', 'FI')->orderBy('name', 'desc')->get();
-
+            var_dump('city');
             $cities = [];
 
             foreach($cityList as $city) {
@@ -81,7 +82,8 @@ class PostController extends Controller
             }
 
             $categories = Category::all()->pluck('description', 'id');
-
+            var_dump('$categories');
+            die();
             return view('post.create', compact('selectedCategory', 'cities', 'categories'));
         } catch (\Exception $exception) {
             \Log::error($exception->getMessage());
