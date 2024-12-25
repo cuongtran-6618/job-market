@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
-                <a href="/" class="text-xl font-bold">Logo</a>
+                <a href="/" class="text-xl font-bold">Homecare</a>
             </div>
 
             <!-- Mobile menu button -->
