@@ -1,3 +1,3 @@
 <header class="container">
-    <x-menu />
+    <x-layout.menu />
 </header>

@@ -6,6 +6,7 @@
     /** Color */
     --red: #dc2626;
     --white: #ffffff;
+    --gray: rgb(209 213 219 / var(--tw-divide-opacity, 1));
 
     /** Space */
     --button-padding-x: 10px;
@@ -36,6 +37,10 @@ table td {
 
 .small-margin {
     margin: 0 var(--margin-link);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--gray);
 }
 
 header {
