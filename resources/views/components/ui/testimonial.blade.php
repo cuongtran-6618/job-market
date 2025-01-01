@@ -19,8 +19,6 @@ $numberOfGrayStars = 5 - $star;
         <h4><strong>{{ $title }}</strong></h4>
     </div>
     <div class="">
-
-
-        <x-fas-quote-left class="w-4 h-4 text-gray-500" />{{ $testimonialContent }}
+        <x-fas-quote-left class="w-4 h-4 text-sky-500" />{{ $testimonialContent }}
     </div>
 </div>
