@@ -1,3 +1,3 @@
-<header class="container mx-auto">
+<header class="w-full">
     <x-layout.menu />
 </header>
