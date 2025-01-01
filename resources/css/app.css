@@ -35,6 +35,13 @@ table td {
     align-content: center;
 }
 
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+
 .small-margin {
     margin: 0 var(--margin-link);
 }

@@ -16,6 +16,8 @@ class Testimonial extends Component
         public string $testimonialContent = "",
         public string $date = "",
         public string $style="",
+        public string $author = "",
+        public int $star = 0,
     )
     {        
     }

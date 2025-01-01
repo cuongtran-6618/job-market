@@ -2,6 +2,7 @@
 $title_how_it_work = 'How it works';
 $title_write_description = 'Write a task description';
 $content_write_description = 'Tell us what you need help with and we will send the job ad to the right professionals.';
+$author = 'John Doe';
 $title_get_offer = 'Get offer';
 $content_get_offer = 'You will soon receive quotes from qualified professionals who can help with the job - without obligation.';
 $title_compare_and_choose = 'Compare and choose';
@@ -27,9 +28,13 @@ $first_testimonial_content = 'Great idea';
 
     <section class="mx-auto py-12 border-bottom max-w-screen-xl">
         <h2 class="mx-auto my-4 text-center text-3xl"><strong>{{ __($title_testimonial) }}</strong></h2>
-        <div class="flex-center items-stretch">
-            <x-ui.testimonial :start="$first_testimonial_start" :date="$first_testimonial_date" :title="$title_write_description" :testimonialContent="$content_write_description"
-                :style="$paragraphStyle" />
+        <div class="flex-center">
+            <x-ui.testimonial :start="$first_testimonial_start" :date="$first_testimonial_date" :title="$title_write_description" :testimonialContent="$content_write_description" :author="$author"
+                :style="$paragraphStyle" :star=3 />
+            <x-ui.testimonial :start="$first_testimonial_start" :date="$first_testimonial_date" :title="$title_write_description" :testimonialContent="$content_write_description" :author="$author"
+                :style="$paragraphStyle" :star=4 />
+            <x-ui.testimonial :start="$first_testimonial_start" :date="$first_testimonial_date" :title="$title_write_description" :testimonialContent="$content_write_description" :author="$author"
+                :style="$paragraphStyle" :star=5 />
         </div>
     </section>
 @stop
