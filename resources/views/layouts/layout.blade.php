@@ -3,9 +3,7 @@
 
     <body class="w-full">
         @include('layouts/header')
-        <div class="container mx-auto">
-            @yield('content')
-        </div>
+        @yield('content')
         @include('layouts/footer')
     </body>
 

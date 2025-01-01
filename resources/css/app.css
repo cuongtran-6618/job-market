@@ -50,5 +50,9 @@ table td {
 }
 
 header {
-    margin: var(--margin-link) auto;
+    margin: 0 auto;
+}
+
+.title-style {
+    margin-bottom: 3rem;
 }

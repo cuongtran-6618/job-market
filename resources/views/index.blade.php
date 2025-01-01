@@ -14,11 +14,13 @@ $first_testimonial_start = 4;
 $first_testimonial_date = '25.12.2024';
 $first_testimonial_title = 'Nice UI';
 $first_testimonial_content = 'Great idea';
+
+$title_popular_project = 'Popular projects';
 ?>
 @extends('layouts/layout')
 @section('content')
-    <section class="mx-auto py-12 border-bottom max-w-screen-xl">
-        <h2 class="mx-auto my-4 text-center text-3xl"><strong>{{ __($title_how_it_work) }}</strong></h2>
+    <section class="mx-auto py-12 max-w-screen-xl">
+        <h2 class="mx-auto my-4 text-center text-3xl title-style"><strong>{{ __($title_how_it_work) }}</strong></h2>
         <div class="flex-center items-stretch">
             <x-ui.paragraph :title="$title_write_description" :content="$content_write_description" :style="$paragraphStyle" />
             <x-ui.paragraph :title="$title_get_offer" :content="$content_get_offer" :style="$paragraphStyle" />
@@ -26,8 +28,15 @@ $first_testimonial_content = 'Great idea';
         </div>
     </section>
 
-    <section class="mx-auto py-12 border-bottom max-w-screen-xl">
-        <h2 class="mx-auto my-4 text-center text-3xl"><strong>{{ __($title_testimonial) }}</strong></h2>
+    <section class="w-full py-12 bg-sky-100">
+        <h2 class="mx-auto my-4 text-center text-3xl title-style"><strong>{{ __($title_popular_project) }}</strong></h2>
+        <div class="max-w-screen-xl ">
+
+        </div>
+    </section>
+
+    <section class="mx-auto py-12 max-w-screen-xl">
+        <h2 class="mx-auto my-4 text-center text-3xl title-style"><strong>{{ __($title_testimonial) }}</strong></h2>
         <div class="flex-center">
             <x-ui.testimonial :start="$first_testimonial_start" :date="$first_testimonial_date" :title="$title_write_description" :testimonialContent="$content_write_description" :author="$author"
                 :style="$paragraphStyle" :star=3 />
@@ -37,4 +46,6 @@ $first_testimonial_content = 'Great idea';
                 :style="$paragraphStyle" :star=5 />
         </div>
     </section>
+
+
 @stop
