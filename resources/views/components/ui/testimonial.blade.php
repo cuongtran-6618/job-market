@@ -1,5 +1,5 @@
 <?php
-$numberOfGrayStars = 5 - $star;
+    $numberOfGrayStars = 5 - $star;
 ?>
 
 <div class="testimonial-container {{ $style }}">
