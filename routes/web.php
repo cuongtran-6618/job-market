@@ -34,4 +34,4 @@ Route::get('/user', [UserController::class, 'index'])->name('user.index');
 Route::get('/post', [PostController::class, 'index'])->name('post.index');
 
 // Create a new job
-Route::get('/job/create', [PostController::class, 'create'])->name('post.create');
+Route::get('/post/create', [PostController::class, 'create'])->name('post.create');

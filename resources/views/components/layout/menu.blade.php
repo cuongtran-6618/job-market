@@ -29,7 +29,7 @@
                     </button>
                     <div class="absolute left-full top-0 hidden group-hover/sub:block w-48 bg-white shadow-lg py-2">
                         @foreach ($categories as $id => $category)
-                            <a href="/job/create?category={{ $category->name }}"
+                            <a href="/post/create?category={{ $category->name }}"
                                 class="block px-3 py-2 hover:bg-gray-100">{{ $category->name }}</a>
                         @endforeach
                     </div>
@@ -56,7 +56,7 @@
                 </button>
                 <div id="products-submenu" class="hidden pl-4">
                     @foreach ($categories as $id => $category)
-                        <a href="/job/create?category={{ $category->name }}"
+                        <a href="/post/create?category={{ $category->name }}"
                             class="block px-3 py-2 hover:bg-gray-100">{{ $category->name }}</a>
                     @endforeach
                 </div>
