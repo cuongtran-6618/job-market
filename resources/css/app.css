@@ -6,6 +6,7 @@
     /** Color */
     --red: #dc2626;
     --white: #ffffff;
+    --blue: blue;
     --gray: rgb(209 213 219 / var(--tw-divide-opacity, 1));
 
     /** Space */
@@ -23,6 +24,7 @@ table td {
     padding: var(--button-padding-x) var(--button-padding-y);
     color: var(--white);
     border-radius: var(--border-radius);
+    background-color: unset;
 }
 
 .btn-delete {
@@ -47,6 +49,10 @@ table td {
 
 .border-bottom {
     border-bottom: 1px solid var(--gray);
+}
+
+.main-content {
+    margin: 7rem auto;
 }
 
 header {
